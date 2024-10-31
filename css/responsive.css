@@ -649,7 +649,13 @@
         font-size: 28px
     }
 
+    #footer {
+        padding: 30px 0 40px !important;
+    }
 
+    .left-area p {
+        font-size: 15px;
+    }
 
     .footer-modals {
         margin-bottom: 2px

@@ -1,65 +1,59 @@
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-
+document.addEventListener("DOMContentLoaded", function () {
   let count = 0;
-  let Call_Back_NO = document.querySelector('#Call_Back_NO');
-  const onLeaveCard = document.querySelector('.OnLeaveCard');
-  const card = document.querySelector('.Card');
+  let Call_Back_NO = document.querySelector("#Call_Back_NO");
+  const onLeaveCard = document.querySelector(".OnLeaveCard");
+  const card = document.querySelector(".Card");
 
   // Make sure the OnLeaveCard is initially hidden
   onLeaveCard.style.display = "none";
 
   // Listen for mouseleave event at the top of the page (clientY <= 0)
-  document.addEventListener('mouseleave', function (event) {
+  document.addEventListener("mouseleave", function (event) {
     if (event.clientY <= 0 && count === 0) {
-      onLeaveCard.style.display = "flex";  // Show the OnLeaveCard
-      count = 1;  // Prevent showing the card again
+      onLeaveCard.style.display = "flex"; // Show the OnLeaveCard
+      count = 1; // Prevent showing the card again
     }
   });
 
   // When user clicks outside the OnLeaveCard, hide it
-  document.addEventListener('click', function (event) {
-    if (onLeaveCard.style.display !== 'none') {
+  document.addEventListener("click", function (event) {
+    if (onLeaveCard.style.display !== "none") {
       if (!card.contains(event.target)) {
-        onLeaveCard.style.display = 'none';
+        onLeaveCard.style.display = "none";
         count = 1;
       }
     }
   });
 
   // No Thanks button functionality
-  document.querySelector('.No_ThanksBtn').addEventListener('click', (e) => {
+  document.querySelector(".No_ThanksBtn").addEventListener("click", (e) => {
     e.preventDefault();
-    count = 1;  // Prevent the card from showing again
+    count = 1; // Prevent the card from showing again
     onLeaveCard.style.display = "none";
   });
 
   // Form submission - hide OnLeaveCard and increment count
-  Call_Back_NO.addEventListener('submit', (e) => {
+  Call_Back_NO.addEventListener("submit", (e) => {
     // e.preventDefault();  // Uncomment if you want to handle form submission with JS
     count = 1;
     onLeaveCard.style.display = "none";
   });
-
 });
 
-
-
-//? Number Validation :-- 
-let User_Number = document.querySelectorAll('.User_Number');
+//? Number Validation :--
+let User_Number = document.querySelectorAll(".User_Number");
 
 User_Number.forEach((number_field) => {
-  number_field.addEventListener('input', () => {
+  number_field.addEventListener("input", () => {
     if (number_field.validity.patternMismatch) {
-      number_field.setCustomValidity('It seems the number is invalid, Your number must start with 9, 8, 7 or 6 and it must be 10 digits only.');
+      number_field.setCustomValidity(
+        "It seems the number is invalid, Your number must start with 9, 8, 7 or 6 and it must be 10 digits only."
+      );
     } else {
-      number_field.setCustomValidity('');
+      number_field.setCustomValidity("");
     }
   });
 });
-
 
 /*
  =========================
@@ -376,13 +370,8 @@ window.addEventListener("scroll", () => {
 
 // ----------custom checkbox--------
 const checkbox = document.getElementById("checkbox");
-const checkbox1 = document.getElementById("checkbox1");
 
 checkbox.addEventListener("click", (e) => {
   checkbox.classList.toggle("checked");
-  console.log(e.target);
-});
-checkbox1.addEventListener("click", (e) => {
-  checkbox1.classList.toggle("checked");
   console.log(e.target);
 });

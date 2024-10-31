@@ -507,7 +507,7 @@ div#thumb_0 {
 }
 
 .card-title {
- font-weight: 600;
+    font-weight: 600;
 }
 
 .card-body {
@@ -849,12 +849,7 @@ aside {
 /* ===================lifelinkr footer ========== */
 
 .content_area {
-    width: 100%;
-    background-color: #ebebeb;
-    display: flex;
-    margin-top: 70px;
-    justify-content: space-evenly;
-    gap: 40px;
+
     padding-block: 1.5rem;
 }
 
@@ -1365,7 +1360,7 @@ Heading Section Start
     padding-bottom: 40px;
 }
 
-#who .white_block{
+#who .white_block {
     margin-top: 0;
 }
 
@@ -2297,7 +2292,7 @@ how_work
 
 
 .time-container .active {
-    background-color: #0041c3!important;
+    background-color: #0041c3 !important;
     border: 2px solid #fff !important;
     color: white !important;
     /* z-index: 1; */
@@ -2543,7 +2538,7 @@ how_work
     font-weight: 500;
 }
 
-.center-area .address a{
+.center-area .address a {
     font-weight: 500;
 }
 
@@ -2695,8 +2690,8 @@ how_work
     text-align: center
 }
 
-.form__btn:hover{
-  color: #fff;
+.form__btn:hover {
+    color: #fff;
 }
 
 
@@ -2888,7 +2883,7 @@ label.error {
     width: 100%;
     height: 100%;
     /* background-color: #ed824e; */
-    
+
     opacity: 0;
     -webkit-transition: opacity .4s ease-in-out;
     -o-transition: opacity .4s ease-in-out;
@@ -2986,4 +2981,30 @@ label.error {
         margin-top: 4px;
     }
 
+}
+
+
+
+/* =============privacy footer ===============  */
+#footer {
+    background: #fff;
+    padding: 0;
+    color: #444;
+    font-size: 14px;
+    padding: 10px 0 10px;
+    box-shadow: 0 -5px 8px #f3f3f3
+}
+
+#footer p {
+    color: #919191;
+    font-size: 15px;
+    font-family: Nunito
+}
+
+.footer_link {
+    margin-left: 6px;
+    cursor: pointer;
+    color: #0d6efd;
+    font-size: 15px;
+    margin: 3px
 }
