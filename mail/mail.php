@@ -182,7 +182,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 			window.onload = function() {       
     setTimeout(function(){
-    window.location.href='https://lifelinkr.com/';
+    window.location.href='https://www.hypersecure.in/';
 },3000); 
 }
 </script>
