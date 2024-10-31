@@ -1,3 +1,66 @@
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  let count = 0;
+  let Call_Back_NO = document.querySelector('#Call_Back_NO');
+  const onLeaveCard = document.querySelector('.OnLeaveCard');
+  const card = document.querySelector('.Card');
+
+  // Make sure the OnLeaveCard is initially hidden
+  onLeaveCard.style.display = "none";
+
+  // Listen for mouseleave event at the top of the page (clientY <= 0)
+  document.addEventListener('mouseleave', function (event) {
+    if (event.clientY <= 0 && count === 0) {
+      onLeaveCard.style.display = "flex";  // Show the OnLeaveCard
+      count = 1;  // Prevent showing the card again
+    }
+  });
+
+  // When user clicks outside the OnLeaveCard, hide it
+  document.addEventListener('click', function (event) {
+    if (onLeaveCard.style.display !== 'none') {
+      if (!card.contains(event.target)) {
+        onLeaveCard.style.display = 'none';
+        count = 1;
+      }
+    }
+  });
+
+  // No Thanks button functionality
+  document.querySelector('.No_ThanksBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    count = 1;  // Prevent the card from showing again
+    onLeaveCard.style.display = "none";
+  });
+
+  // Form submission - hide OnLeaveCard and increment count
+  Call_Back_NO.addEventListener('submit', (e) => {
+    // e.preventDefault();  // Uncomment if you want to handle form submission with JS
+    count = 1;
+    onLeaveCard.style.display = "none";
+  });
+
+});
+
+
+
+//? Number Validation :-- 
+let User_Number = document.querySelectorAll('.User_Number');
+
+User_Number.forEach((number_field) => {
+  number_field.addEventListener('input', () => {
+    if (number_field.validity.patternMismatch) {
+      number_field.setCustomValidity('It seems the number is invalid, Your number must start with 9, 8, 7 or 6 and it must be 10 digits only.');
+    } else {
+      number_field.setCustomValidity('');
+    }
+  });
+});
+
+
 /*
  =========================
 ? => Navbar Toggle Btn
@@ -265,7 +328,7 @@ document.querySelectorAll(".pagination-btn").forEach((button) => {
 ==========================================
 */
 
-const whoSection = document.getElementById("who-2");
+const whoSection = document.getElementById("register_form");
 const stickyDiv = document.getElementById("stickyDiv");
 
 let lastScrollY = window.scrollY;
@@ -277,7 +340,7 @@ const observer = new IntersectionObserver(
 
       if (entry.isIntersecting && scrollingDown) {
         stickyDiv.style.position = "absolute";
-        stickyDiv.style.top = "-924px";
+        stickyDiv.style.top = "-627px";
       } else if (!entry.isIntersecting && !scrollingDown) {
         stickyDiv.style.position = "fixed";
         stickyDiv.style.top = "95px";
@@ -288,7 +351,7 @@ const observer = new IntersectionObserver(
   },
   {
     root: null,
-    threshold: 0.31,
+    threshold: 0.99,
   }
 );
 
