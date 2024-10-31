@@ -7,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "gchauhan.dm@gmail.com, himanshu.lifelinkr@gmail.com"; // Replace with your company Gmail address
     $subject = "Request Call Back";
     $message = "You have received a request for a call back. The phone number is: " . $phone_number;
-    $headers = "From: hello@hypersecure.com"; // Replace with your domain
+    $headers = "From: leads@hypersecure.in"; // Replace with your domain
 
     // Send email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Your request has been sent successfully.";
+        echo "";
     } else {
         echo "There was an error sending your request.";
     }
@@ -122,7 +122,7 @@ h1{
       <h1>Thank you !</h1>
       <p>We have received your query.  </p>
       <p>Our team member will contact you soon  </p>
-      <button class="go-home"><a href="tel:+91 9999854243" style="color:white; text-decoration:none;">
+      <button class="go-home"><a href="tel:+91 8882459136" style="color:white; text-decoration:none;">
       Call Now
       </button>
     </div>
@@ -135,18 +135,18 @@ h1{
 
 </body>
 
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K3MZPQ8T');</script>
+})(window,document,'script','dataLayer','GTM-KS8RVSXV');</script>
 <!-- End Google Tag Manager -->
 
 
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3MZPQ8T"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8RVSXV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 

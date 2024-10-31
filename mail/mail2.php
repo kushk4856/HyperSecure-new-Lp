@@ -5,14 +5,12 @@ if (isset($_POST['submit'])) { // Updated to check for 'submit' since your butto
     $email_subject = "Query from Hyper Secure Long LP (Footer)";
 
     // validation expected data exists
-    if (!isset($_POST['name']) || !isset($_POST['Phone']) || !isset($_POST['company_email'])) {
+    if (!isset($_POST['mbl_no']) ) {
         die('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
     // Sanitize and assign POST data to variables
-    // $name = $_POST['name']; // required
     $phone = $_POST['mbl_no']; // required
-    // $company_email = $_POST['company_email']; // required
 
     // Function to sanitize input data
     function clean_string($string) {
@@ -24,13 +22,11 @@ if (isset($_POST['submit'])) { // Updated to check for 'submit' since your butto
 
     // Prepare email message
     $email_message = "";
-    // $email_message .= "Name: " . clean_string($name) . "\n";
     $email_message .= "Phone: " . clean_string($phone) . "\n";
-    // $email_message .= "Company Email: " . clean_string($company_email) . "\n";
     $email_message .= "IP Address: " . clean_string($ip) . "\n";
 
     // Email headers
-    $headers = "From: hello@hypersecure.com\r\n";
+    $headers = "From: leads@hypersecure.in\r\n";
     $headers .= 'X-Mailer: PHP/' . phpversion();
 
     // Send email
@@ -142,7 +138,7 @@ h1{
       <h1>Thank you !</h1>
       <p>We have received your query.  </p>
       <p>Our team member will contact you soon  </p>
-      <button class="go-home"><a href="tel:+91 9999854243" style="color:white; text-decoration:none;">
+      <button class="go-home"><a href="tel:+91 8882459136" style="color:white; text-decoration:none;">
       Call Now
       </button>
     </div>
@@ -161,12 +157,13 @@ h1{
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K3MZPQ8T');</script>
+})(window,document,'script','dataLayer','GTM-KS8RVSXV');</script>
 <!-- End Google Tag Manager -->
 
 
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3MZPQ8T"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8RVSXV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 

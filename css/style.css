@@ -875,6 +875,10 @@ aside {
     cursor: pointer;
 }
 
+.policy{
+font-weight: 500;
+}
+
 .blue-link-footer {
     color: #00B1FF !important;
     font-weight: 600;
@@ -1370,9 +1374,10 @@ Heading Section Start
     font-weight: 700;
     font-size: 16px;
     line-height: 0px;
-    letter-spacing: 1px;
     display: inline-block;
-    padding: 17px 0px;
+    padding: 15px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 3px;
     margin-top: 15px;
     color: #fff;
@@ -1382,7 +1387,7 @@ Heading Section Start
     transition: 0.3s all ease-in-out;
     outline: none;
     border: none;
-    width: 58%;
+    width: fit-content;
     cursor: pointer;
 
 }
@@ -2233,6 +2238,7 @@ how_work
     flex-direction: column;
     gap: 30px;
     width: 300px;
+    padding-top: 245px;
     height: 500px;
     padding-right: 4px;
     overflow-y: scroll;
@@ -2480,7 +2486,6 @@ how_work
     color: #707070;
     font-size: 16px;
     font-family: Nunito;
-    text-align: justify;
     margin-left: 0px;
     margin-top: 10px;
     font-weight: 500;
@@ -2719,145 +2724,6 @@ label.error {
 }
 
 
-/* Responsive styles for the modal */
-@media screen and (max-width: 992px) {
-    .popup_modal {
-        min-width: 90%;
-        padding: 20px;
-    }
-
-    .date_time_picker.active {
-        flex-direction: column;
-        align-items: center;
-        padding-inline: 20px;
-    }
-
-    .datepicker {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .form_timeSlots {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .time-container {
-        width: 100%;
-    }
-
-    .modal__footer {
-        padding-inline: 20px;
-    }
-
-
-}
-
-@media (max-width: 768px) {
-    .popup_modal .close {
-        top: 5px;
-        right: 10px;
-    }
-
-    .popup.active {
-        top: 0 !important;
-        height: 104vh !important;
-
-    }
-
-    .time-container {
-        width: inherit;
-        height: 480px;
-    }
-
-    .popup_modal #calendar_header {
-
-        margin-bottom: 10px;
-    }
-
-    .time {
-        gap: 16px;
-    }
-
-    .date_time_picker.active {
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    .popup_modal .datepicker {
-        width: 100%;
-    }
-
-    .fields {
-        flex-direction: column;
-        gap: 0px;
-
-    }
-
-    .form__textarea {
-        height: 100px !important;
-    }
-
-
-
-    .form__input,
-    .form__textarea {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .modal__footer {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .modal__footer .next_btn {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 10px;
-    }
-
-    .selected-time {
-        width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .time {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .date_time_picker.active {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .days {
-        gap: 3px;
-    }
-
-    .date-input {
-        padding: 6px 0px 6px 8px !important;
-
-    }
-
-
-
-    .time span {
-        width: 100%;
-    }
-
-    .calendar_footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .calendar_footer button {
-        width: 100%;
-    }
-}
-
 
 .btn--orange {
     background: linear-gradient(to right, #009bdc 0, #0041c3 100%);
@@ -2926,62 +2792,7 @@ label.error {
     font-size: 14px
 }
 
-/* Adjustments for smaller screens */
-@media (max-width: 425px) {
-    .popup_modal .close {
-        top: 10px;
-        font-size: 21px;
-    }
 
-    .popup.active {
-        top: 10px;
-    }
-
-    .popup_modal {
-        padding: 15px;
-        width: 90%;
-        height: 90%;
-    }
-
-
-    .datepicker {
-        padding: 10px !important;
-        width: 280px !important;
-        margin-top: 20px;
-    }
-
-    .time-container {
-        display: none;
-    }
-
-    .time_selection_option {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-        border: none;
-        outline: none;
-        box-shadow: rgba(222, 225, 228, 0.4) 0px 0px 0px 2px, rgba(253, 254, 255, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    }
-
-    .weekdays div,
-    .days button {
-        font-size: 12px;
-    }
-
-    .month-year {
-        font-size: 16px;
-    }
-
-    .selected-time.active {
-        font-size: 16px;
-        margin-top: 8px;
-    }
-
-    .modal__footer {
-        margin-top: 4px;
-    }
-
-}
 
 
 
@@ -2998,6 +2809,7 @@ label.error {
 #footer p {
     color: #919191;
     font-size: 15px;
+    margin-right: 3px;
     font-family: Nunito
 }
 

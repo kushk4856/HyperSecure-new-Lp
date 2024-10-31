@@ -11,6 +11,7 @@ const dateInput = document.getElementById("dateInput");
 const popup = document.getElementById("popup");
 const popupBtn = document.getElementById("popup_btn");
 const callbackBtn = document.getElementById("call_back_btn");
+const callbackBtnMbl = document.querySelectorAll(".call_back_btn_mbl");
 const dateTimePicker = document.getElementById("date_time_picker");
 const modalContact = document.getElementById("modal_contact");
 const modalNextBtn = document.getElementById("modalNextBtn");
@@ -36,7 +37,20 @@ modalFooter.insertBefore(errorMessage, modalFooter.firstChild);
 timeOptionsSelected.addEventListener("click", () => {
   let selectedIndex = timeOptionsSelected.selectedIndex;
   selectedTime = timeOptionsSelected.options[selectedIndex].text;
-  console.log(selectedTime);
+  // console.log('Time :'+selectedTime);
+
+  
+  if (selectedDate) {
+    const options = { weekday: "long", day: "numeric", month: "long" };
+    dateInput.value = selectedDate.toLocaleDateString("en-US", options);
+    select.value = `${dateInput.value}, ${selectedTime}`;
+    // console.log(`Date : ${dateInput.value}, ${selectedTime}`);
+    
+  } else {
+    dateInput.value = "";
+  }
+  updateError();
+
 });
 
 function updateError() {
@@ -62,6 +76,19 @@ callbackBtn.addEventListener("click", () => {
   dateTimePicker.classList.toggle("active");
   updateError();
 });
+
+
+callbackBtnMbl.forEach((e)=>{
+  e.addEventListener("click", () => {
+    popup.classList.toggle("active");
+    dateTimePicker.classList.toggle("active");
+    dateTimePicker.classList.toggle("active");
+    updateError();
+
+})
+})
+
+// console.log(select.value);
 
 select.value = currentDate.toDateString();
 
@@ -140,6 +167,8 @@ function updateDateInput() {
     const options = { weekday: "long", day: "numeric", month: "long" };
     dateInput.value = selectedDate.toLocaleDateString("en-US", options);
     select.value = `${dateInput.value}`;
+    // console.log(`Date : ${dateInput.value} ${selectedTime}`);
+    
   } else {
     dateInput.value = "";
   }
@@ -158,6 +187,7 @@ nextMonthBtn.addEventListener("click", () => {
 
 updateCalendar();
 updateDateInput();
+
 
 // ---------time slote ----------
 
